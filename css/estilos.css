@@ -424,3 +424,73 @@ button.submit:focus-visible { outline: 2px solid var(--accent-ink); outline-offs
 }
 .done h2 { font-size: 1.9rem; margin: 0 0 0.5rem; }
 .done p { color: var(--muted); margin: 0 auto; max-width: 36ch; }
+
+/* ---- Contadores por alergia/intolerancia ---- */
+.alergia-contadores {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.95rem 0.85rem;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: grid;
+  gap: 0.5rem;
+  animation: fade 0.22s ease both;
+}
+.alergia-contadores-title {
+  font-size: 0.76rem;
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 0 0.2rem;
+}
+.alergia-qty-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.alergia-qty-label {
+  font-size: 0.88rem;
+  color: var(--ink);
+  flex: 1;
+  min-width: 0;
+}
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+  flex-shrink: 0;
+}
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  color: var(--accent-ink);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.14s ease;
+  display: grid;
+  place-items: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
+}
+.qty-btn:hover { background: var(--accent-soft); }
+.qty-btn:active { background: var(--line-soft); }
+.qty-btn:disabled { opacity: 0.35; cursor: default; }
+.qty-num {
+  min-width: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  padding: 0 0.3rem;
+  user-select: none;
+  line-height: 30px;
+}
