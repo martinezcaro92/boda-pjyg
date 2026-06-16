@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-label="Marcador para la foto de los novios">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F3EC"/>
+      <stop offset="1" stop-color="#ECEAE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#g)"/>
+  <rect x="24" y="24" width="852" height="552" fill="none" stroke="#D8D2C5" stroke-width="1.5"/>
+  <g fill="none" stroke="#6E7A5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(450 256)">
+    <path d="M-34 6 c0 -22 16 -34 34 -16 c18 -18 34 -6 34 16 c0 20 -34 42 -34 42 c0 0 -34 -22 -34 -42 z"/>
+  </g>
+  <text x="450" y="372" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#8A857B">Vuestra foto aquí</text>
+  <text x="450" y="408" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="2" fill="#A8A296">SUSTITUYE img/novios.jpg</text>
+</svg>

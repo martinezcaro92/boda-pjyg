@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enlace de Pedro Javier &amp; Gemma</title>
+  <meta name="description" content="Nos casamos. Toda la información de nuestra boda: fecha, lugar, itinerario y confirmación de asistencia." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="index.html">Pedro Javier <span class="amp">&amp;</span> Gemma</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu" aria-label="Principal">
+        <a href="index.html" class="is-active">Inicio</a>
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a class="btn btn--sm" href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PORTADA ===== -->
+  <section class="hero">
+    <p class="eyebrow hero__eyebrow">Nos casamos</p>
+    <h1 class="hero__names">Pedro Javier <span class="amp">&amp;</span> Gemma</h1>
+    <p class="hero__date">Sábado 14 de noviembre de 2026</p>
+    <div class="hero__photo">
+      <!-- Sustituye por vuestra foto: guarda img/novios.jpg y cambia el src -->
+      <img src="img/novios.jpg" alt="Los novios" />
+    </div>
+    <div style="margin-top: 2rem;">
+      <a class="btn" href="confirmar-asistencia.html">Confirmar asistencia</a>
+    </div>
+  </section>
+
+  <!-- ===== INFORMACIÓN BÁSICA + CUENTA ATRÁS ===== -->
+  <section class="section section--tint" id="la-boda">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">La boda</p>
+        <h2>Lo esencial</h2>
+        <hr class="rule center" />
+      </div>
+
+      <div class="keyinfo">
+        <div class="kcard">
+          <p class="k-eyebrow">Cuándo</p>
+          <h3 class="serif">Sábado 14 de noviembre</h3>
+          <p>2026 · a las 12:00 h</p>
+        </div>
+        <div class="kcard">
+          <p class="k-eyebrow">La ceremonia</p>
+          <h3 class="serif">Iglesia de San Francisco</h3>
+          <p>Calle Nogalte, Lorca (Murcia)</p>
+        </div>
+      </div>
+
+      <!-- Cuenta atrás · edita la fecha en data-date (formato AAAA-MM-DDTHH:MM:SS) -->
+      <div id="countdown" class="countdown" data-date="2026-11-14T12:00:00" style="margin-top: 2.5rem;" aria-label="Cuenta atrás para la boda">
+        <div class="cd__cell"><div class="cd__num" data-unit="dias">––</div><div class="cd__lbl">Días</div></div>
+        <span class="cd__sep">·</span>
+        <div class="cd__cell"><div class="cd__num" data-unit="horas">––</div><div class="cd__lbl">Horas</div></div>
+        <span class="cd__sep">·</span>
+        <div class="cd__cell"><div class="cd__num" data-unit="min">––</div><div class="cd__lbl">Minutos</div></div>
+        <span class="cd__sep">·</span>
+        <div class="cd__cell"><div class="cd__num" data-unit="seg">––</div><div class="cd__lbl">Segundos</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ITINERARIO ===== -->
+  <section class="section" id="itinerario">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">El día</p>
+        <h2>Itinerario</h2>
+        <hr class="rule center" />
+        <p>El plan, hora a hora, para que no te pierdas nada.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl__item tl__item--tint">
+          <p class="tl__time">12:00 h</p>
+          <h3 class="tl__title">Ceremonia</h3>
+          <p class="tl__desc">Eucaristía en la Iglesia de San Francisco, en Lorca.</p>
+        </div>
+        <div class="tl__item">
+          <p class="tl__time">14:30 h</p>
+          <h3 class="tl__title">Cóctel</h3>
+          <p class="tl__desc">Aperitivo de bienvenida en Guirrete Celebraciones y Eventos, en Puerto Lumbreras.</p>
+        </div>
+        <div class="tl__item">
+          <p class="tl__time">15:30 h</p>
+          <h3 class="tl__title">Comida</h3>
+          <p class="tl__desc">Banquete para celebrarlo juntos sin prisa.</p>
+        </div>
+        <div class="tl__item">
+          <p class="tl__time">18:30 h</p>
+          <h3 class="tl__title">Fiesta</h3>
+          <p class="tl__desc">Barra libre, música y baile hasta que el cuerpo aguante.</p>
+        </div>
+        <div class="tl__item">
+          <p class="tl__time">22:00 h</p>
+          <h3 class="tl__title">Tentempié</h3>
+          <p class="tl__desc">Recena para reponer fuerzas y seguir la fiesta.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 2.5rem;">
+        <a class="btn btn--outline" href="como-llegar.html">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AGRADECIMIENTO ===== -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="thanks lead">
+        <p class="eyebrow" style="text-align:center;">Gracias</p>
+        <h2 class="serif" style="font-size: clamp(1.9rem,5vw,2.7rem); text-align:center; margin-bottom: 1.2rem;">Unas palabras</h2>
+        <p>Si estás leyendo esto es porque formas parte de nuestra historia, y no se nos ocurre mejor manera de empezar esta nueva etapa que rodeados de la gente que queremos. </p>
+        <p>Gracias por acompañarnos, por los kilómetros que algunos haréis para estar, y por compartir con nosotros un día que llevamos tiempo soñando.</p>
+        <p>Nos hace muchísima ilusión celebrarlo contigo. Nos vemos muy pronto.</p>
+        <p class="signature">Con todo el cariño,<br />Pedro Javier &amp; Gemma</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PIE ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="fbrand">Pedro Javier <span class="amp">&amp;</span> Gemma</p>
+      <p class="fdate">14 · 11 · 2026 — Lorca</p>
+      <nav class="flinks" aria-label="Pie">
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+      <p class="fnote">Jose Manuel Mona · &copy; <span data-year>2026</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

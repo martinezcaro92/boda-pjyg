@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regalo · PJ &amp; G</title>
+  <meta name="description" content="Si quieres tener un detalle con nosotros." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="index.html">Pedro Javier <span class="amp">&amp;</span> Gemma</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html" class="is-active">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a class="btn btn--sm" href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section page-top">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Un detalle</p>
+        <h2>Regalo de boda</h2>
+        <hr class="rule center" />
+      </div>
+
+      <div class="gift">
+        <p class="lead">
+          Lo más importante para nosotros es que nos acompañes ese día: tu presencia es, de verdad, el mejor regalo. Aun así, hay quien nos ha preguntado cómo tener un detalle, así que aquí lo dejamos por si te apetece ayudarnos con nuestros próximos proyectos, como ese viaje que tantas ganas tenemos de hacer. Sea como sea, gracias de corazón.
+        </p>
+
+        <div class="account">
+          <p class="k-eyebrow">Número de cuenta</p>
+          <p class="iban" id="iban">ES00 0000 0000 0000 0000 0000</p>
+          <p class="holder">Titulares: PJ &amp; G</p>
+          <button class="copybtn" data-copy="ES00 0000 0000 0000 0000 0000">Copiar IBAN</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== PIE ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="fbrand">Pedro Javier <span class="amp">&amp;</span> Gemma</p>
+      <p class="fdate">14 · 11 · 2026 — Lorca</p>
+      <nav class="flinks" aria-label="Pie">
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+      <p class="fnote">Jose Manuel Mona · &copy; <span data-year>2026</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

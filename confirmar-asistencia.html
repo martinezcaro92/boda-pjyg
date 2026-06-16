@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar asistencia · PJ &amp; G</title>
+  <meta name="description" content="Confirma tu asistencia a nuestra boda." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="index.html">Pedro Javier <span class="amp">&amp;</span> Gemma</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a class="btn btn--sm" href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section page-top">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Confirmación de asistencia</p>
+        <h2>¿Nos acompañas?</h2>
+        <hr class="rule center" />
+        <p>Nos encantaría celebrar este día contigo. Cuéntanos si podrás venir antes del 1 de septiembre.</p>
+      </div>
+
+      <div class="form-wrap">
+        <section class="card-form">
+          <!-- ====== FORMULARIO ====== -->
+          <form id="rsvp" novalidate>
+
+            <fieldset>
+              <legend>Tus datos</legend>
+              <p class="group-note">Para localizarte si necesitamos avisarte de algo.</p>
+
+              <div class="field">
+                <label class="lbl" for="nombre">Nombre y apellidos <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label class="lbl" for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" />
+              </div>
+            </fieldset>
+
+            <hr class="divider" />
+
+            <fieldset>
+              <legend>¿Podrás venir?</legend>
+              <div class="options row" role="radiogroup" aria-label="¿Podrás venir?">
+                <label class="opt">
+                  <input type="radio" name="asistencia" value="Sí" required />
+                  <span class="dot"></span><span>Sí, allí estaré</span>
+                </label>
+                <label class="opt">
+                  <input type="radio" name="asistencia" value="No" />
+                  <span class="dot"></span><span>No podré asistir</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div id="detalles" class="conditional" hidden>
+              <hr class="divider" />
+              <fieldset>
+                <legend>Detalles</legend>
+
+                <div class="field">
+                  <label class="lbl" for="adultos">Número de comensales adultos que te acompañarán
+                    <span class="hint">Sin contarte a ti.</span>
+                  </label>
+                  <select id="adultos" name="comensales_adultos">
+                    <option value="" disabled selected>Selecciona…</option>
+                    <option value="1">1</option><option value="2">2</option>
+                    <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label class="lbl" for="infantiles">Número de comensales infantiles que te acompañarán
+                    <span class="hint">Opcional. Déjalo en blanco si no vienen niños.</span>
+                  </label>
+                  <select id="infantiles" name="comensales_infantiles">
+                    <option value="" selected>—</option>
+                    <option value="1">1</option><option value="2">2</option>
+                    <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label class="lbl" for="nombres">Nombres de tus acompañantes
+                    <span class="hint">Si vienes acompañado/a, indícanos quiénes.</span>
+                  </label>
+                  <textarea id="nombres" name="nombres_acompanantes" placeholder="Ej.: Marta López, Daniel Ruiz"></textarea>
+                </div>
+
+                <div class="field">
+                  <p class="lbl" style="margin-bottom:0.55rem;">¿Alergia o intolerancia alimentaria?
+                    <span class="hint" style="font-weight:400;">Puedes marcar varias.</span>
+                  </p>
+                  <div class="options row" role="group" aria-label="Alergia o intolerancia alimentaria">
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Ninguna" data-none checked /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Ninguna</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Gluten/Celiaquía" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Gluten / celiaquía</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Lácteos" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Lácteos</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Lactosa" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Lactosa</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Huevo" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Huevo</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Frutos secos" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Frutos secos</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Mariscos/Crustáceos" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Mariscos / crustáceos</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Pescado" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Pescado</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Soja" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Soja</span></label>
+                    <label class="opt"><input type="checkbox" name="alergia_intolerancia" value="Otro" /><span class="box" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.4 6.2l2.3 2.3L9.6 3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Otro</span></label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="lbl" for="observaciones">Observaciones</label>
+                  <textarea id="observaciones" name="observaciones" placeholder="Ej.: dieta vegetariana, vegana, varias alergias, trona para bebé…"></textarea>
+                </div>
+
+                <div class="field">
+                  <p class="lbl" style="margin-bottom:0.55rem;">¿Necesitaréis autobús?
+                    <span class="hint" style="font-weight:400;">Habrá servicio de autobús desde Lorca y Totana.</span>
+                  </p>
+                  <div class="options" role="radiogroup" aria-label="¿Necesitaréis autobús?">
+                    <label class="opt"><input type="radio" name="autobus" value="No" /><span class="dot"></span><span>No, iremos por nuestra cuenta</span></label>
+                    <label class="opt"><input type="radio" name="autobus" value="Sí, desde Lorca" /><span class="dot"></span><span>Sí, desde Lorca</span></label>
+                    <label class="opt"><input type="radio" name="autobus" value="Sí, desde Totana" /><span class="dot"></span><span>Sí, desde Totana</span></label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="lbl" for="cancion">La canción que no puede faltar
+                    <span class="hint">Tu tema imprescindible para la pista de baile.</span>
+                  </label>
+                  <input type="text" id="cancion" name="cancion" placeholder="Ej.: artista — título" />
+                </div>
+              </fieldset>
+            </div>
+
+            <hr class="divider" />
+
+            <fieldset>
+              <span class="group-label">Un mensaje para nosotros</span>
+              <p class="group-note">Si te apetece, déjanos unas palabras.</p>
+              <div class="field">
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí…"></textarea>
+              </div>
+            </fieldset>
+
+            <div class="actions">
+              <button type="submit" class="submit" id="submitBtn">Enviar confirmación</button>
+              <p class="form-error" id="formError">No hemos podido enviar tu confirmación. Revisa tu conexión e inténtalo de nuevo.</p>
+              <p class="demo-note" id="demoNote">Vista previa: aún no has conectado la URL de Apps Script, así que el envío se simula.</p>
+            </div>
+          </form>
+
+          <!-- ====== ÉXITO ====== -->
+          <div class="done" id="done" role="status" aria-live="polite">
+            <div class="check" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2 id="doneTitle">¡Confirmación recibida!</h2>
+            <p id="doneText">Gracias, lo hemos apuntado. Nos vemos muy pronto.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== PIE ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="fbrand">Pedro Javier <span class="amp">&amp;</span> Gemma</p>
+      <p class="fdate">14 · 11 · 2026 — Lorca</p>
+      <nav class="flinks" aria-label="Pie">
+        <a href="como-llegar.html">Cómo llegar</a>
+        <a href="lorca.html">Lorca</a>
+        <a href="totana.html">Totana</a>
+        <a href="regalo.html">Regalo</a>
+        <a href="faq.html">FAQ</a>
+        <a href="confirmar-asistencia.html">Confirmar asistencia</a>
+      </nav>
+      <p class="fnote">Jose Manuel Mona · &copy; <span data-year>2026</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/rsvp.js"></script>
+</body>
+</html>
