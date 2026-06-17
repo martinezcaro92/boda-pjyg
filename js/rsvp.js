@@ -3,15 +3,7 @@
    Envío a Google Sheets vía Apps Script.
    ========================================================= */
 
-/* ---------------------------------------------------------
-   CONFIGURACIÓN
-   Pega aquí la URL de tu aplicación web de Apps Script cuando
-   la tengas. Mientras conserve el valor de ejemplo, el
-   formulario funciona en modo demostración: valida y muestra
-   el mensaje de éxito sin enviar nada a ningún sitio.
---------------------------------------------------------- */
-const SCRIPT_URL = "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT";
-const DEMO = !SCRIPT_URL || SCRIPT_URL.startsWith("PEGA_AQUI");
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby7rAFwo2mqTzhy-B5b_ynlIBYRXzbG3BsU7vU8PFqKE4SVidyzuaaufejQCkMHDTM/exec";
 
 (function () {
   const form      = document.getElementById("rsvp");
@@ -19,17 +11,14 @@ const DEMO = !SCRIPT_URL || SCRIPT_URL.startsWith("PEGA_AQUI");
   const detalles  = document.getElementById("detalles");
   const submitBtn = document.getElementById("submitBtn");
   const formError = document.getElementById("formError");
-  const demoNote  = document.getElementById("demoNote");
   const donePanel = document.getElementById("done");
   const doneTitle = document.getElementById("doneTitle");
   const doneText  = document.getElementById("doneText");
 
-  if (DEMO && demoNote) demoNote.style.display = "block";
-
   // Mostrar/ocultar el bloque de detalles según asistencia
   function toggleDetalles() {
     const value = (form.querySelector('input[name="asistencia"]:checked') || {}).value;
-    const asiste = value === "Sí";
+    const asiste = value === "Si";
     detalles.hidden = !asiste;
     if (asiste) detalles.classList.add("reveal");
   }
@@ -147,15 +136,11 @@ const DEMO = !SCRIPT_URL || SCRIPT_URL.startsWith("PEGA_AQUI");
       return a;
     }).join(", ");
     data.set("alergia_intolerancia", alergiaStr);
-    data.append("timestamp", new Date().toISOString());
+    data.append("timestamp", new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" }));
 
     try {
-      if (DEMO) {
-        await new Promise(r => setTimeout(r, 700));
-      } else {
-        // FormData = petición "simple": evita el preflight CORS con Apps Script
-        await fetch(SCRIPT_URL, { method: "POST", body: data });
-      }
+      const params = new URLSearchParams(data);
+      await fetch(SCRIPT_URL, { method: "POST", body: params, redirect: "follow" });
       showSuccess(data.get("asistencia"));
     } catch (err) {
       submitBtn.disabled = false;
